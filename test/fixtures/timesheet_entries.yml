@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  date: 2013-04-23 11:59:31
+  duration: 9.99
+
+two:
+  date: 2013-04-23 11:59:31
+  duration: 9.99
