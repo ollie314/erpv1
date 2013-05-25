@@ -13,4 +13,8 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-*.lock
+# No Gemfile.lock as dev and prod platforms are not the same
+Gemfile.lock
+# *.lock # should be better
+# *.lck  # hide special locks
+# *.LCK  # hide special locks
