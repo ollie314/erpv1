@@ -18,3 +18,4 @@ Gemfile.lock
 # *.lock # should be better
 # *.lck  # hide special locks
 # *.LCK  # hide special locks
+.idea
