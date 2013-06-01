@@ -9,8 +9,8 @@ class Api::ProvidersController < ApplicationController
     @providers = Provider.all
 
     respond_to do |format|
-      format.json {render json: @providers}
-      format.xml {render xml: @providers}
+      format.json { render json: @providers }
+      format.xml { render xml: @providers }
     end
   end
 
@@ -20,8 +20,8 @@ class Api::ProvidersController < ApplicationController
   def show
     @provider = Provider.find(params[:id])
     respond_to do |format|
-      format.json {render json: @provider}
-      format.xml {render xml: @provider}
+      format.json { render json: @provider }
+      format.xml { render xml: @provider }
     end
   end
 
@@ -31,8 +31,8 @@ class Api::ProvidersController < ApplicationController
   def new
     @provider = Provider.new
     respond_to do |format|
-      format.json {render json: @provider}
-      format.xml {render xml: @provider}
+      format.json { render json: @provider }
+      format.xml { render xml: @provider }
     end
   end
 
@@ -48,8 +48,8 @@ class Api::ProvidersController < ApplicationController
 
     respond_to do |format|
       if @provider.save
-        format.json { render json: @provider, status: :created}
-        format.xml { render xml: @provider, status: :created}
+        format.json { render json: @provider, status: :created }
+        format.xml { render xml: @provider, status: :created }
       else
         format.json { render json: @provider.errors, status: :unprocessable_entity }
         format.xml { render xml: @provider.errors, status: :unprocessable_entity }

@@ -18,7 +18,7 @@ class ContactTypesControllerTest < ActionController::TestCase
 
   test "should create contact_type" do
     assert_difference('ContactType.count') do
-      post :create, contact_type: {  }
+      post :create, contact_type: {}
     end
 
     assert_redirected_to contact_type_path(assigns(:contact_type))
@@ -35,7 +35,7 @@ class ContactTypesControllerTest < ActionController::TestCase
   end
 
   test "should update contact_type" do
-    put :update, id: @contact_type, contact_type: {  }
+    put :update, id: @contact_type, contact_type: {}
     assert_redirected_to contact_type_path(assigns(:contact_type))
   end
 

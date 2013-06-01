@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
 
   has_one :contact
   has_many :timesheets
-  validates :mail, :presence => true, :uniqueness => true, :email =>  true
+  validates :mail, :presence => true, :uniqueness => true, :email => true
   attr_accessible :active, :mail, :password
 
   def self.authenticate(identity, credential)

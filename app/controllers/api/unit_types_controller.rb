@@ -9,8 +9,8 @@ class Api::UnitTypesController < ApplicationController
     @unit_type = UnitType.all
 
     respond_to do |format|
-      format.json {render json: @unit_type}
-      format.xml {render xml: @unit_type}
+      format.json { render json: @unit_type }
+      format.xml { render xml: @unit_type }
     end
   end
 
@@ -20,8 +20,8 @@ class Api::UnitTypesController < ApplicationController
   def show
     @unit_type = UnitType.find(params[:id])
     respond_to do |format|
-      format.json {render json: @unit_type}
-      format.xml {render xml: @unit_type}
+      format.json { render json: @unit_type }
+      format.xml { render xml: @unit_type }
     end
   end
 
@@ -31,8 +31,8 @@ class Api::UnitTypesController < ApplicationController
   def new
     @unit_type = UnitType.new
     respond_to do |format|
-      format.json {render json: @unit_type}
-      format.xml {render xml: @unit_type}
+      format.json { render json: @unit_type }
+      format.xml { render xml: @unit_type }
     end
   end
 
@@ -48,8 +48,8 @@ class Api::UnitTypesController < ApplicationController
 
     respond_to do |format|
       if @provider.save
-        format.json { render json: @unit_type, status: :created}
-        format.xml { render xml: @unit_type, status: :created}
+        format.json { render json: @unit_type, status: :created }
+        format.xml { render xml: @unit_type, status: :created }
       else
         format.json { render json: @unit_type.errors, status: :unprocessable_entity }
         format.xml { render xml: @unit_type.errors, status: :unprocessable_entity }

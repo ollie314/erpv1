@@ -11,120 +11,131 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130518150624) do
+ActiveRecord::Schema.define(:version => 20130527203152) do
 
   create_table "addresses", :force => true do |t|
-    t.string   "name"
-    t.string   "street1"
-    t.string   "street2"
-    t.string   "city"
-    t.string   "state"
-    t.string   "zipcode"
-    t.string   "country"
+    t.string "name"
+    t.string "street1"
+    t.string "street2"
+    t.string "city"
+    t.string "state"
+    t.string "zipcode"
+    t.string "country"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "benefits", :force => true do |t|
-    t.integer  "code"
-    t.string   "name"
-    t.text     "info"
+    t.integer "code"
+    t.string "name"
+    t.text "info"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "contact_infos", :force => true do |t|
-    t.string   "name"
-    t.text     "info"
+    t.string "name"
+    t.text "info"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "contact_profiles", :force => true do |t|
-    t.string   "name"
-    t.string   "info"
+    t.string "name"
+    t.string "info"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "contacts", :force => true do |t|
-    t.string   "firstname"
-    t.string   "lastname"
-    t.integer  "active"
+    t.string "firstname"
+    t.string "lastname"
+    t.integer "active"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "mail_addresses", :force => true do |t|
-    t.string   "name"
-    t.string   "address"
-    t.string   "note"
+    t.string "name"
+    t.string "address"
+    t.string "note"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "material_on_sites", :force => true do |t|
+    t.integer "material_id"
+    t.integer "site_id"
+    t.integer "code"
+    t.string "info"
+    t.integer "qty"
+    t.integer "unit_type"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "materials", :force => true do |t|
-    t.string   "name"
-    t.text     "info"
-    t.decimal  "price",      :precision => 10, :scale => 2
-    t.string   "code"
-    t.string   "label"
-    t.datetime "created_at",                                :null => false
-    t.datetime "updated_at",                                :null => false
+    t.string "name"
+    t.text "info"
+    t.decimal "price", :precision => 10, :scale => 2
+    t.string "code"
+    t.string "label"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "phones", :force => true do |t|
-    t.string   "name"
-    t.string   "phone"
-    t.string   "note"
+    t.string "name"
+    t.string "phone"
+    t.string "note"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "providers", :force => true do |t|
-    t.string   "name"
-    t.string   "mail"
-    t.string   "phone"
-    t.text     "address"
-    t.text     "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.string "name"
+    t.string "mail"
+    t.string "phone"
+    t.text "address"
+    t.text "description"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "sites", :force => true do |t|
-    t.string   "name"
-    t.text     "info"
+    t.string "name"
+    t.text "info"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.integer  "parent_id"
+    t.integer "parent_id"
   end
 
   create_table "timesheet_entries", :force => true do |t|
     t.datetime "date"
-    t.decimal  "duration",   :precision => 10, :scale => 0
-    t.datetime "created_at",                                :null => false
-    t.datetime "updated_at",                                :null => false
+    t.decimal "duration", :precision => 10, :scale => 0
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "timesheets", :force => true do |t|
-    t.string   "title"
-    t.text     "info"
-    t.date     "date"
+    t.string "title"
+    t.text "info"
+    t.date "date"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "unit_types", :force => true do |t|
-    t.string   "name"
-    t.text     "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|
-    t.string   "mail"
-    t.string   "password"
-    t.integer  "active"
+    t.string "mail"
+    t.string "password"
+    t.integer "active"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

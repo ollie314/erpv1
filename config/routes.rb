@@ -1,8 +1,8 @@
 Erpv1::Application.routes.draw do
 
   namespace :api do
-    resources :users, :defaults => { :format => 'json' }
-    resources :contact_infos, :defaults => { :format => 'json' }
+    resources :users, :defaults => {:format => 'json'}
+    resources :contact_infos, :defaults => {:format => 'json'}
     resources :providers, :defaults => {:format => 'json'}
     resources :unit_types, :defaults => {:format => 'json'}
 
@@ -13,7 +13,7 @@ Erpv1::Application.routes.draw do
   end
 
   # Needed for responding to OPTIONS http method
-  match '*path' =>  'cors#options_for_mopd', :via => :options
+  match '*path' => 'cors#options_for_mopd', :via => :options
 
 =begin
   get "user/index"
