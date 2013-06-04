@@ -3,18 +3,18 @@ class Api::ConnectionController < ApplicationController
 
   respond_to :json, :xml
 
-  AUTHENT_SUCCESS       = 0
-  AUTHENT_FAILURE       = 1
-  AUTHENT_INVALID       = 2
-  AUTHENT_CORRUPT_DATA  = 3
+  AUTHENT_SUCCESS = 0
+  AUTHENT_FAILURE = 1
+  AUTHENT_INVALID = 2
+  AUTHENT_CORRUPT_DATA = 3
 
-  SUCCESS_STATUS            = 200
-  BAD_STATUS                = 400
-  UNAUTHORIZED_STATUS       = 401
-  FORBIDDEN_STATUS          = 403
-  NOT_FOUND_STATUS          = 404
+  SUCCESS_STATUS = 200
+  BAD_STATUS = 400
+  UNAUTHORIZED_STATUS = 401
+  FORBIDDEN_STATUS = 403
+  NOT_FOUND_STATUS = 404
   METHOD_NOT_ALLOWED_STATUS = 405
-  NOT_ACCEPTABLE_STATUS     = 406
+  NOT_ACCEPTABLE_STATUS = 406
 
   def signin
     login = params[:login]
